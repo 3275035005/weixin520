@@ -1,0 +1,68 @@
+<!-- banner -->
+<view class="detailed_banner">
+    <swiper class="detailed_banner__swiper"	indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#ffffff">
+        <swiper-item class="detailed_banner__item">
+            <image src="{{item.image}}" class="detailed_banner__image" />
+        </swiper-item>
+    </swiper>
+</view>
+<!-- banner -->
+
+
+<!-- box -->
+<view class="detailed_box">
+
+    <!-- info -->
+    <view class="detailed_info shadow">
+    
+        <!-- integral -->
+        <view class="detailed_integral flex">
+            <view class="detailed_integral__number">{{item.title}}</view>
+            <view class="detailed_integral__text">{{item.teacherName}}</view>
+        </view>
+        <!-- integral -->
+
+  
+
+        <!-- dep -->
+        <view class="detailed_dep">开课时间：{{item.startTime}}</view>
+        <view class="detailed_dep">完课时间：{{item.endTime}}</view>
+    
+
+        <!-- other -->
+        <view class="detailed_other flex">
+            <view class="detailed_other__item">剩余座位数 <text>{{item.residueNumber}}</text></view>
+            <view class="detailed_other__item">座位数 <text>{{item.number}}</text></view>
+        </view>
+        <!-- other -->
+
+    </view>
+    <!-- info -->
+
+
+</view>
+<!-- box -->
+
+
+<!-- column -->
+<view class="detailed_column">
+    <text class="line">——</text>
+    <text>课程详情</text>
+    <text class="line">——</text>
+</view>
+<!-- column -->
+
+
+<!-- content -->
+<view class="detailed_content">
+  <rich-text nodes="{{item.description}}"></rich-text>
+</view>
+<!-- content -->
+
+
+<!-- btn -->
+<view class="detailed_btn flex">
+  <view class="page_button1 center flex" bindtap="appointmentCourseBtn" wx:if="{{item.flag == false}}">预约课程</view>
+
+  <view class="page_button2 center flex" bindtap="cancelAppointmentCourseBtn" wx:else>取消预约</view>
+</view>

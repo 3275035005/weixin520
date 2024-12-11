@@ -1,0 +1,68 @@
+<!-- logo -->
+<view class="login_logo flex center">
+   教培小程序注册
+</view>
+<!-- logo -->
+
+
+
+<!-- 手机登录 -->
+<block>
+
+    <!-- form -->
+    <view class="login_form">
+
+        <view class="login_form__item">
+            <label for="" class="flex">
+                <view class="login_form__title">姓名</view>
+                <view class="login_form__box">
+                    <input type="text" placeholder="请输入您的姓名"  model:value="{{name}}"  class="login_form__input" />
+                </view>
+            </label>
+        </view>
+
+        <view class="login_form__item">
+            <label for="" class="flex">
+                <view class="login_form__title">联系电话</view>
+                <view class="login_form__box">
+                    <input type="text" placeholder="请输入联系电话"  model:value="{{phone}}" class="login_form__input" />
+                </view>
+            </label>
+        </view>
+        <view class="login_form__item">
+            <label for="" class="flex">
+                <view class="login_form__title">账号</view>
+                <view class="login_form__box">
+                    <input type="text" placeholder="请输入账号"   model:value="{{username}}" class="login_form__input" />
+                </view>
+            </label>
+        </view>
+        <view class="login_form__item">
+            <label for="" class="flex">
+                <view class="login_form__title">密码</view>
+                <view class="login_form__box">
+                    <input type="text" type="password" placeholder="请输入密码" model:value="{{password}}" class="login_form__input" />
+                </view>
+            </label>
+        </view>
+        <view class="login_form__item">
+            <label for="" class="flex">
+                <view class="login_form__title">班级</view>
+                <view class="login_form__box">
+                  <picker bindchange="class_Change" range="{{classList}}" range-key="title">
+                {{classList[class_Index].title}}
+            </picker>
+                </view>
+            </label>
+        </view>
+
+        <view class="login_form__item">
+            <button class="page_button flex center" bindtap="register_button" style="padding:0; width: 630rpx;">
+                注册
+            </button>
+        </view>
+    </view>
+    <!-- form -->
+
+</block>
+<!-- 手机登录 -->

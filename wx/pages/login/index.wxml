@@ -1,0 +1,68 @@
+<!-- logo -->
+<view class="login_logo flex center">
+   教培小程序登录
+</view>
+<!-- logo -->
+
+
+
+<!-- 手机登录 -->
+<block>
+
+    <!-- form -->
+    <view class="login_form">
+
+        <view class="login_form__item">
+            <label for="" class="flex">
+                <view class="login_form__title">账号</view>
+                <view class="login_form__box">
+                    <input type="text" placeholder="请输入账号"  model:value="{{username}}" class="login_form__input" />
+                </view>
+            </label>
+        </view>
+
+        <view class="login_form__item">
+            <label for="" class="flex">
+                <view class="login_form__title">密码</view>
+                <view class="login_form__box">
+                    <input type="password" placeholder="请输入密码"  model:value="{{password}}" class="login_form__input" />
+                </view>
+            </label>
+        </view>
+
+        <view class="login_form__item">
+            <button class="page_button flex center"  bindtap="login_Username_Button"  style="padding:0; width: 630rpx;">
+                登录
+            </button>
+        </view>
+    </view>
+    <!-- form -->
+
+</block>
+<!-- 手机登录 -->
+
+
+
+
+<!-- other -->
+<view class="login_other">
+
+    <!-- column -->
+    <view class="login_other__column">您也可以用以下方式注册</view>
+    <!-- column -->
+
+    <!-- box -->
+    <view class="box flex center">
+
+        <!-- reg -->
+        <view class="login_other__mobile" bindtap="login_register">
+            <image src="/images/icon_zhuce.svg" class="login_other__icon" />
+            <view class="login_other__text">注册</view>
+        </view>
+        <!-- reg -->
+
+    </view>
+    <!-- box -->
+
+</view>
+<!-- other -->
